@@ -64,6 +64,8 @@ header .sub{color:var(--muted);font-size:12px;margin-top:3px}
 .kpi .k{font-size:12px;color:var(--muted)}
 .kpi .v{font-size:26px;font-weight:800;margin-top:4px;font-variant-numeric:tabular-nums}
 .kpi .s{font-size:11px;color:var(--muted);margin-top:3px}
+.kpi[data-click]{cursor:pointer}
+.kpi[data-click]:hover{outline:1px solid var(--gold)}
 .v.g{color:var(--green)} .v.r{color:var(--red)} .v.gd{color:var(--gold)} .v.b{color:var(--blue)}
 .charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px;margin:6px 0 18px}
 .chart{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
@@ -79,6 +81,9 @@ header .sub{color:var(--muted);font-size:12px;margin-top:3px}
 .hbar .fill.pos{background:linear-gradient(90deg,#22c55e,var(--green))}
 .hbar .fill.neg{background:linear-gradient(90deg,#ef4444,var(--red))}
 .hbar .v{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.hbar{cursor:pointer;border-radius:8px;padding:0 4px;transition:background .15s}
+.hbar:hover{background:rgba(245,196,81,.07)}
+.hbar:hover .l{color:var(--gold)}
 .pos{color:var(--green)} .neg{color:var(--red)} .zero{color:var(--muted)}
 .vbars{display:flex;align-items:flex-end;gap:8px;height:150px;padding-top:6px}
 .vbar{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;min-width:26px}
@@ -124,6 +129,20 @@ tr.detail-row td{background:var(--panel2);font-size:12px;color:var(--muted);whit
 .b-loss{background:rgba(248,113,113,.17);color:var(--red)}
 .btn-detail{background:none;border:1px solid var(--line);color:var(--muted);border-radius:6px;padding:2px 8px;font-size:12px;cursor:pointer}
 .btn-detail:hover{color:var(--gold);border-color:var(--gold)}
+.drawer{position:fixed;inset:0;background:rgba(6,10,18,.72);display:none;align-items:flex-start;justify-content:center;padding:36px 14px;z-index:50;overflow:auto}
+.drawer.open{display:flex}
+.drawer-card{background:var(--panel);border:1px solid var(--line2);border-radius:16px;max-width:1120px;width:100%;padding:18px 20px;box-shadow:0 24px 70px rgba(0,0,0,.55)}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.drawer-head h3{font-size:18px;color:var(--gold)}
+.drawer-close{background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:4px 12px;cursor:pointer;font-size:13px}
+.drawer-close:hover{color:var(--gold);border-color:var(--gold)}
+.drawer-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-bottom:14px}
+.drawer-kpi{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.drawer-kpi .k{font-size:11px;color:var(--muted)}
+.drawer-kpi .v{font-size:17px;font-weight:800}
+.drawer-table{max-height:440px;overflow:auto}
+.drawer-table table{min-width:1000px}
+.drawer-table .hl{color:var(--gold);font-weight:700}
 footer{margin-top:28px;color:var(--muted);font-size:12px;text-align:center}
 .empty{color:var(--muted);text-align:center;padding:40px 0}
 </style>
@@ -170,6 +189,21 @@ footer{margin-top:28px;color:var(--muted);font-size:12px;text-align:center}
   <tbody></tbody>
 </table></div>
 
+<div class="drawer" id="drawer">
+  <div class="drawer-card">
+    <div class="drawer-head"><h3 id="drawerTitle"></h3><button class="drawer-close" id="drawerClose">✕ 关闭</button></div>
+    <div class="drawer-kpis" id="drawerKpis"></div>
+    <div class="drawer-table"><table id="drawerTable">
+      <thead><tr>
+        <th>日期</th><th>主队</th><th>比分</th><th>客队</th>
+        <th>让球推荐</th><th>让球结果</th><th>让球盈亏</th>
+        <th>大小球推荐</th><th>大小球结果</th><th>大小球盈亏</th>
+        <th>总盈亏</th><th>状态</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </div>
+</div>
 <footer id="footer"></footer>
 </div>
 
@@ -191,6 +225,7 @@ function rec(o){return ["赢","赢半","走水","输半","输"].map(c=>c+" "+(o[
 let scope = DAYS.length ? "all" : "";
 let q="", league="", status="";
 let sortKey="kickoff", sortDir=1;
+let CUR_LIST=[];
 
 function matchesIn(day){return (LEDGER.days[day]||{}).matches||[];}
 function allMatches(){const out=[];for(const d of DAYS){for(const m of matchesIn(d))out.push({day:d,...m});}return out;}
@@ -228,9 +263,10 @@ function donut(el, parts, center1, center2){
   for(const p of parts){if(p.value<=0)continue;const len=p.value/total*c;segs+=`<circle r="${r}" cx="60" cy="60" fill="none" stroke="${p.color}" stroke-width="15" stroke-dasharray="${len} ${c-len}" stroke-dashoffset="${-acc*c}" transform="rotate(-90 60 60)"><title>${esc(p.label)} ${p.value}</title></circle>`;acc+=p.value/total;}
   el.innerHTML=`<div class="donut"><svg viewBox="0 0 120 120" width="128" height="128">${segs||'<circle r="34" cx="60" cy="60" fill="none" stroke="#2a3650" stroke-width="15"/>'}<text x="60" y="56" text-anchor="middle" font-size="14" font-weight="800" fill="#e8eef7">${center1}</text><text x="60" y="72" text-anchor="middle" font-size="9" fill="#93a3bd">${center2}</text></svg><div class="lbl">${parts.map(p=>`<span style="white-space:nowrap"><i style="background:${p.color}"></i>${esc(p.label)} ${p.value}</span>`).join(" ")}</div></div>`;
 }
-function hbars(el, items){
+function hbars(el, items, onClick){
   const max=Math.max(...items.map(i=>Math.abs(i.value)),1);
-  el.innerHTML=items.map(it=>`<div class="hbar"><div class="l" title="${esc(it.label)}">${esc(it.label)}</div><div class="track"><div class="fill ${it.value>=0?"pos":"neg"}" style="width:${Math.max(1.5,Math.abs(it.value)/max*100)}%"></div></div><div class="v ${clsNum(it.value)}">${fmt(it.value)}</div></div>`).join("")||'<div class="empty">暂无数据</div>';
+  el.innerHTML=items.map(it=>`<div class="hbar"${onClick?` data-k="${esc(it.label)}"`:` role="button"`}><div class="l" title="${esc(it.label)}">${esc(it.label)}</div><div class="track"><div class="fill ${it.value>=0?"pos":"neg"}" style="width:${Math.max(1.5,Math.abs(it.value)/max*100)}%"></div></div><div class="v ${clsNum(it.value)}">${fmt(it.value)}</div></div>`).join("")||'<div class="empty">暂无数据</div>';
+  if(onClick)el.querySelectorAll(".hbar").forEach(row=>row.onclick=()=>onClick(row.dataset.k));
 }
 function vbars(el, items){
   const max=Math.max(...items.map(i=>Math.abs(i.value)),1);
@@ -250,11 +286,21 @@ function renderKPIs(list){
     ["已结算",s.done,(s.total?s.done/s.total*100:0).toFixed(1)+"%",null,"var(--green)"],
     ["让球胜率",s.hp_rate==null?"-":s.hp_rate+"%","赢"+(s.hp["赢"]||0)+" 赢半"+(s.hp["赢半"]||0)+" 输"+(s.hp["输"]||0),"b","var(--gold)"],
     ["大小球胜率",s.ou_rate==null?"-":s.ou_rate+"%","赢"+(s.ou["赢"]||0)+" 赢半"+(s.ou["赢半"]||0)+" 输"+(s.ou["输"]||0),"b","var(--gold)"],
-    ["让球盈亏",fmt(s.pl_h)+" 注",rec(s.hp),s.pl_h>=0?"g":"r","var(--green)"],
-    ["大小球盈亏",fmt(s.pl_o)+" 注",rec(s.ou),s.pl_o>=0?"g":"r","var(--green)"],
-    ["总盈亏",fmt(s.pl_sum)+" 注",(s.done?((s.pl_sum/s.done).toFixed(2)):"0")+" / 场",s.pl_sum>=0?"g":"r","var(--green)"],
+    ["让球盈亏",fmt(s.pl_h)+" 注",rec(s.hp),s.pl_h>=0?"g":"r","var(--green)","hp"],
+    ["大小球盈亏",fmt(s.pl_o)+" 注",rec(s.ou),s.pl_o>=0?"g":"r","var(--green)","ou"],
+    ["总盈亏",fmt(s.pl_sum)+" 注",(s.done?((s.pl_sum/s.done).toFixed(2)):"0")+" / 场",s.pl_sum>=0?"g":"r","var(--green)","sum"],
   ];
-  document.getElementById("kpis").innerHTML=kpis.map(k=>`<div class="kpi" style="--accent:${k[4]}"><div class="k">${k[0]}</div><div class="v ${k[3]}">${k[1]}</div><div class="s">${k[2]}</div></div>`).join("");
+  document.getElementById("kpis").innerHTML=kpis.map(k=>`<div class="kpi"${k[5]?` data-click="${k[5]}"`:""} style="--accent:${k[4]}"><div class="k">${k[0]}</div><div class="v ${k[3]}">${k[1]}</div><div class="s">${k[2]}</div></div>`).join("");
+  document.querySelectorAll("#kpis .kpi[data-click]").forEach(el=>{
+    el.onclick=()=>{
+      const kind=el.dataset.click;
+      let ms,title;
+      if(kind==="hp"){ms=CUR_LIST.filter(m=>m.handicap_result);title="让球盈亏明细";}
+      else if(kind==="ou"){ms=CUR_LIST.filter(m=>m.ou_result);title="大小球盈亏明细";}
+      else{ms=CUR_LIST.filter(m=>m.handicap_result||m.ou_result);title="总盈亏明细";}
+      openDetail(title,ms);
+    };
+  });
 }
 function renderCharts(list){
   const s=accumulate(list);
@@ -272,11 +318,11 @@ function renderCharts(list){
   // league profit top10
   const lg={};for(const m of list){(lg[m.league||"未分类"]=lg[m.league||"未分类"]||[]).push(m);}
   const lgRows=Object.keys(lg).map(k=>({label:k, value:accumulate(lg[k]).pl_sum})).sort((a,b)=>Math.abs(b.value)-Math.abs(a.value)).slice(0,10).sort((a,b)=>b.value-a.value);
-  hbars(document.getElementById("chartLeague"), lgRows);
+  hbars(document.getElementById("chartLeague"), lgRows, label=>openDetail("联赛·"+label, CUR_LIST.filter(m=>(m.league||"未分类")===label)));
   // team profit top10
   const tm={};for(const m of list){const mm={...m};(tm[m.home]=tm[m.home]||[]).push(mm);(tm[m.away]=tm[m.away]||[]).push(mm);}
   const tmRows=Object.keys(tm).map(k=>({label:k, value:accumulate(tm[k]).pl_sum})).sort((a,b)=>Math.abs(b.value)-Math.abs(a.value)).slice(0,10).sort((a,b)=>b.value-a.value);
-  hbars(document.getElementById("chartTeam"), tmRows);
+  hbars(document.getElementById("chartTeam"), tmRows, label=>openDetail("球队·"+label, CUR_LIST.filter(m=>m.home===label||m.away===label), label));
 }
 function renderFilters(){
   const leagues=new Set(),statuses=new Set();
@@ -337,6 +383,7 @@ function renderTable(list){
 }
 function render(){
   const list=filtered();
+  CUR_LIST=list;
   renderTabs();renderKPIs(list);renderCharts(list);renderFilters();renderTable(list);
   document.getElementById("subtitle").textContent=`北京时间自然日 · 数据存于 GitHub 仓库 · 最近更新 ${LEDGER.generated_at||"-"}`;
   document.getElementById("footer").innerHTML=`共 ${DAYS.length} 个比赛日 · ${allMatches().length} 场比赛 · 生成于 ${LEDGER.generated_at||"-"} · 数据源 qtx（球天下）`;
@@ -344,6 +391,48 @@ function render(){
 document.getElementById("q").addEventListener("input",e=>{q=e.target.value;render();});
 document.getElementById("leagueFilter").addEventListener("change",e=>{league=e.target.value;render();});
 document.getElementById("statusFilter").addEventListener("change",e=>{status=e.target.value;render();});
+function openDetail(title, ms, team){
+  const s=accumulate(ms);
+  document.getElementById("drawerTitle").textContent=title;
+  document.getElementById("drawerKpis").innerHTML=[
+    ["场次",s.total],["已结算",s.done],
+    ["让球盈亏",fmt(s.pl_h)+" 注",s.pl_h>=0?"g":"r"],
+    ["大小球盈亏",fmt(s.pl_o)+" 注",s.pl_o>=0?"g":"r"],
+    ["总盈亏",fmt(s.pl_sum)+" 注",s.pl_sum>=0?"g":"r"]
+  ].map(k=>`<div class="drawer-kpi"><div class="k">${k[0]}</div><div class="v ${k[2]||""}">${k[1]}</div></div>`).join("");
+  const tb=document.querySelector("#drawerTable tbody");
+  const sorted=ms.slice().sort((a,b)=>{
+    const pa=pl(a.handicap_result,oddsOf(a.handicap_pick,0))||0, qa=pl(a.ou_result,oddsOf(a.ou_pick,0))||0;
+    const pb=pl(b.handicap_result,oddsOf(b.handicap_pick,0))||0, qb=pl(b.ou_result,oddsOf(b.ou_pick,0))||0;
+    return (pb+qb)-(pa+qa) || String(a.kickoff||"").localeCompare(String(b.kickoff||""),"zh");
+  });
+  tb.innerHTML=sorted.map(m=>{
+    const oh=oddsOf(m.handicap_pick,0),oo=oddsOf(m.ou_pick,0);
+    const hpl=pl(m.handicap_result,oh),opl=pl(m.ou_result,oo);
+    const tot=hpl!=null&&opl!=null?hpl+opl:(hpl!=null?hpl:(opl!=null?opl:null));
+    const hcls=team&&m.home===team?"home hl":"home";
+    const acls=team&&m.away===team?"away hl":"away";
+    return `<tr>
+      <td>${esc(m.day)} ${esc((m.kickoff||"").slice(5,16))}</td>
+      <td class="${hcls}">${esc(m.home)}</td>
+      <td class="score">${m.score?esc(m.score):"-"}</td>
+      <td class="${acls}">${esc(m.away)}</td>
+      <td>${esc(m.handicap_pick||"-")}</td>
+      <td>${m.handicap_result?`<span class="badge ${resCls(m.handicap_result)}">${esc(m.handicap_result)}</span>`:"-"}</td>
+      <td class="num ${clsNum(hpl)}">${hpl!=null?fmt(hpl):"-"}</td>
+      <td>${esc(m.ou_pick||"-")}</td>
+      <td>${m.ou_result?`<span class="badge ${resCls(m.ou_result)}">${esc(m.ou_result)}</span>`:"-"}</td>
+      <td class="num ${clsNum(opl)}">${opl!=null?fmt(opl):"-"}</td>
+      <td class="num ${clsNum(tot)}">${tot!=null?fmt(tot):"-"}</td>
+      <td><span class="badge ${statusCls(m.status)}">${esc(m.status)}</span></td>
+    </tr>`;
+  }).join("")||'<tr><td colspan="12" class="empty">暂无明细</td></tr>';
+  document.getElementById("drawer").classList.add("open");
+}
+function closeDrawer(){document.getElementById("drawer").classList.remove("open");}
+document.getElementById("drawerClose").onclick=closeDrawer;
+document.getElementById("drawer").addEventListener("click",e=>{if(e.target.id==="drawer")closeDrawer();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer();});
 document.querySelectorAll("#matchTable thead th[data-k]").forEach(th=>{th.onclick=()=>{const k=th.dataset.k;if(sortKey===k){sortDir*=-1;}else{sortKey=k;sortDir=1;}render();};});
 render();
 </script>
