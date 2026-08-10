@@ -250,6 +250,9 @@ def run_settle(date_str: str, dry_run: bool = False) -> tuple[int, int]:
     if not data["matches"]:
         log(f"settle {date_str}: no rows stored")
         return 0, 0
+    if all(row.get("status") == STATUS_SETTLED for row in data["matches"]):
+        log(f"settle {date_str}: all {len(data['matches'])} rows already settled, skip fetch")
+        return 0, 0
     results = qtx_source.fetch_results_robust(date_str)
     log(f"settle {date_str}: fetched {len(results)} result rows from qtx")
     by_id = {r.get("id"): r for r in results if r.get("id")}
