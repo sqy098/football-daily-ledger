@@ -11,10 +11,13 @@ All times are converted to Asia/Shanghai. No third-party dependencies.
 from __future__ import annotations
 
 import gzip
+import hashlib
 import html
+import http.cookiejar
 import json
 import os
 import re
+import time
 import urllib.request
 from datetime import datetime
 from pathlib import Path
@@ -37,20 +40,139 @@ _ITEM_RE = re.compile(
 )
 
 
-def http_get(url: str, timeout: float = 45.0) -> str:
-    request = urllib.request.Request(
-        url,
-        headers={
-            "User-Agent": USER_AGENT,
-            "Accept-Language": "zh-CN,zh;q=0.9",
-            "Referer": QTX_BASE + "/",
-        },
+_COOKIE_JAR = http.cookiejar.CookieJar()
+_OPENER = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(_COOKIE_JAR))
+_CHALLENGE_MD5_RE = re.compile(r"SparkMD5\.hash\(\"([0-9a-f]+)\"\)")
+_CHALLENGE_NAME_RE = re.compile(r"document\.cookie = \"([0-9a-f]+)=")
+_PW_ONLY = False  # urllib challenge solving proved futile; go straight to Playwright
+_PW_FETCHER = None  # lazily created _PlaywrightFetcher
+
+
+def _solve_challenge(page_text: str) -> bool:
+    """qtx serves a JS challenge: md5(salt) becomes a cookie, reload after ~5s.
+
+    Returns True when the cookie was computed and stored for a retry.
+    """
+    md5_match = _CHALLENGE_MD5_RE.search(page_text)
+    name_match = _CHALLENGE_NAME_RE.search(page_text)
+    if not md5_match or not name_match:
+        return False
+    value = hashlib.md5(md5_match.group(1).encode("utf-8")).hexdigest()
+    cookie = http.cookiejar.Cookie(
+        0, name_match.group(1), value, None, False,
+        "m.live.qtx.com", False, False, "/", False, True,
+        4102444800, None, None, {}, True,
     )
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        raw = response.read()
-        if response.headers.get("Content-Encoding") == "gzip":
-            raw = gzip.decompress(raw)
-        return raw.decode("utf-8", "replace")
+    _COOKIE_JAR.set_cookie(cookie)
+    return True
+
+
+def _default_chromium_path():
+    """Locate an installed Playwright chromium build for the Playwright fallback."""
+    candidate = os.environ.get("QTX_CHROMIUM_PATH")
+    if candidate and Path(candidate).exists():
+        return candidate
+    base = Path.home() / "AppData" / "Local" / "ms-playwright"
+    if base.is_dir():
+        for build in sorted(base.glob("chromium-*/chrome-win64/chrome.exe"), reverse=True):
+            return str(build)
+    return ""
+
+
+class _PlaywrightFetcher:
+    """Fetch final page HTML with a real Chromium so the qtx JS challenge is solved naturally."""
+
+    def __init__(self) -> None:
+        self._pw = None
+        self._browser = None
+        self._context = None
+        self._executable = _default_chromium_path()
+
+    def _ensure(self) -> None:
+        if self._browser is not None:
+            return
+        from playwright.sync_api import sync_playwright
+        self._pw = sync_playwright().start()
+        launch_args = {"headless": True, "args": ["--no-sandbox", "--disable-blink-features=AutomationControlled"]}
+        if self._executable:
+            launch_args["executable_path"] = self._executable
+        self._browser = self._pw.chromium.launch(**launch_args)
+        self._context = self._browser.new_context(user_agent=USER_AGENT, locale="zh-CN")
+
+    def fetch(self, url: str) -> str:
+        self._ensure()
+        page = self._context.new_page()
+        try:
+            page.goto(url, wait_until="domcontentloaded", timeout=60000)
+            deadline = time.time() + 25.0
+            while time.time() < deadline:
+                try:
+                    title = page.title()
+                except Exception:
+                    title = ""
+                if title != "客户端环境检测":
+                    break
+                time.sleep(1.0)
+            return page.content()
+        finally:
+            page.close()
+
+    def close(self) -> None:
+        try:
+            if self._browser is not None:
+                self._browser.close()
+        finally:
+            self._browser = None
+            self._context = None
+            if self._pw is not None:
+                self._pw.stop()
+            self._pw = None
+
+
+def _pw_fetch(url: str) -> str:
+    global _PW_FETCHER
+    if _PW_FETCHER is None:
+        _PW_FETCHER = _PlaywrightFetcher()
+    return _PW_FETCHER.fetch(url)
+
+
+def http_get(url: str, timeout: float = 45.0) -> str:
+    """GET ``url``, transparently solving the qtx JS-cookie challenge.
+
+    A plain urllib request is tried first; once the challenge proves unsolvable
+    there (the anti-bot checks browser fingerprints), the request falls back to
+    a real headless Chromium via Playwright, which runs the challenge's
+    countdown+reload naturally.
+    """
+    global _PW_ONLY
+    if not _PW_ONLY:
+        for attempt in range(2):
+            challenge = False
+            try:
+                request = urllib.request.Request(
+                    url,
+                    headers={
+                        "User-Agent": USER_AGENT,
+                        "Accept-Language": "zh-CN,zh;q=0.9",
+                        "Referer": QTX_BASE + "/",
+                    },
+                )
+                with _OPENER.open(request, timeout=timeout) as response:
+                    raw = response.read()
+                    if response.headers.get("Content-Encoding") == "gzip":
+                        raw = gzip.decompress(raw)
+                    text = raw.decode("utf-8", "replace")
+                if "\u5ba2\u6237\u7aef\u73af\u5883\u68c0\u6d4b" in text:
+                    challenge = True
+            except Exception:
+                break
+            if challenge:
+                _solve_challenge(text)
+                time.sleep(6.0)
+                continue
+            return text
+        _PW_ONLY = True
+    return _pw_fetch(url)
 
 
 def _smalls(block_text: str) -> list[str]:
@@ -114,6 +236,40 @@ def fetch_schedule(date_str: str) -> list[dict]:
 def fetch_results(date_str: str) -> list[dict]:
     url = f"{QTX_BASE}/over?date={date_str.replace('-', '')}"
     return parse_items(http_get(url), date_str)
+
+
+def fetch_schedule_robust(date_str: str, attempts: int = 3, timeout: float = 45.0) -> list[dict]:
+    """Fetch the day's schedule despite CDN staleness.
+
+    The qtx mobile ``schedule`` page honors ?date= but a CDN layer frequently
+    serves a stale cached variant (another day or a partial page).  Fetch
+    several variants (with cache-busting nonces) and merge by qtx match id,
+    keeping items whose kickoff falls on the target date.
+    """
+    import random
+    date_compact = date_str.replace("-", "")
+    urls = [f"{QTX_BASE}/schedule?date={date_compact}"]
+    urls += [f"{QTX_BASE}/schedule?date={date_compact}&_={random.randint(10**8, 10**9)}"
+             for _ in range(attempts)]
+    urls.append(f"{QTX_BASE}/schedule")
+    by_id: dict[str, dict] = {}
+    order: list[str] = []
+    for url in urls:
+        try:
+            items = parse_items(http_get(url, timeout=timeout), date_str, strict=False)
+        except Exception:
+            continue
+        for item in items:
+            mid = item.get("id")
+            if not mid:
+                continue
+            same_day = item["kickoff"][:10] == date_str
+            old = by_id.get(mid)
+            if old is None or (same_day and old["kickoff"][:10] != date_str):
+                if mid not in by_id:
+                    order.append(mid)
+                by_id[mid] = item
+    return [by_id[mid] for mid in order]
 
 
 def _find_skill_dir() -> str:

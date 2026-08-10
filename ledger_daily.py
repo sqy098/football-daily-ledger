@@ -40,6 +40,7 @@ STATUS_IN_PROGRESS = "进行中"
 STATUS_SETTLED = "已结算"
 STATUS_PENDING = "待赛果"
 NO_LINE = "未开盘"
+SETTLE_WINDOW_DAYS = int(os.environ.get("FOOTBALL_SETTLE_WINDOW_DAYS", "5"))
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
@@ -155,7 +156,7 @@ def _parse_leagues(text: str | None) -> set[str] | None:
 
 def run_scan(date_str: str, dry_run: bool = False, min_water: float | None = None,
              leagues: set[str] | None = None) -> int:
-    matches = qtx_source.fetch_schedule(date_str)
+    matches = qtx_source.fetch_schedule_robust(date_str)
     if not matches:
         log(f"scan {date_str}: no matches fetched from qtx")
         return 0
@@ -361,11 +362,23 @@ def run_dictionary() -> int:
     return 0
 
 
+def run_settle_window(end_date: str, window_days: int = SETTLE_WINDOW_DAYS, dry_run: bool = False) -> None:
+    """Settle the last ``window_days`` days, so a failed fetch one morning does
+    not permanently miss settlement results."""
+    end = datetime.strptime(end_date, "%Y-%m-%d").date()
+    for i in range(window_days):
+        day = (end - timedelta(days=i)).strftime("%Y-%m-%d")
+        try:
+            run_settle(day, dry_run=dry_run)
+        except Exception as exc:
+            log(f"settle {day}: ERROR {exc!r}")
+
+
 def run_daily(date_str: str | None, dry_run: bool, min_water: float | None, leagues: set[str] | None) -> int:
     target = date_str or today_str()
     yesterday = (datetime.strptime(target, "%Y-%m-%d") - timedelta(days=1)).strftime("%Y-%m-%d")
-    log(f"=== daily run: settle {yesterday} then scan {target} ===")
-    run_settle(yesterday, dry_run=dry_run)
+    log(f"=== daily run: settle window ending {yesterday} (last {SETTLE_WINDOW_DAYS} days) then scan {target} ===")
+    run_settle_window(yesterday, dry_run=dry_run)
     run_scan(target, dry_run=dry_run, min_water=min_water, leagues=leagues)
     return 0
 
