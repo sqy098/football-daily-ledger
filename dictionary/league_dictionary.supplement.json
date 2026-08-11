@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-08-10T09:34:44+08:00",
-  "entry_count": 228,
+  "updated_at": "2026-08-11T09:32:48+08:00",
+  "entry_count": 242,
   "entries": [
     {
       "canonical_name": "不丹超",
@@ -3871,6 +3871,244 @@
         "加纳超杯"
       ],
       "updated_at": "2026-08-10T09:34:44+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "乌干超8",
+      "aliases": [
+        "乌干超8"
+      ],
+      "raw_names": [
+        "乌干超8"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "亚挑联",
+      "aliases": [
+        "亚挑联"
+      ],
+      "raw_names": [
+        "亚挑联"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "亚精英赛",
+      "aliases": [
+        "亚精英赛"
+      ],
+      "raw_names": [
+        "亚精英赛"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "俄杯",
+      "aliases": [
+        "俄杯"
+      ],
+      "raw_names": [
+        "俄杯"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "巴圣青联",
+      "aliases": [
+        "巴圣青联"
+      ],
+      "raw_names": [
+        "巴圣青联"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "希腊杯",
+      "aliases": [
+        "希腊杯"
+      ],
+      "raw_names": [
+        "希腊杯"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "捷克杯",
+      "aliases": [
+        "捷克杯"
+      ],
+      "raw_names": [
+        "捷克杯"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "斯伐杯",
+      "aliases": [
+        "斯伐杯"
+      ],
+      "raw_names": [
+        "斯伐杯"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "爱沙U19",
+      "aliases": [
+        "爱沙U19"
+      ],
+      "raw_names": [
+        "爱沙U19"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "爱沙杯",
+      "aliases": [
+        "爱沙杯"
+      ],
+      "raw_names": [
+        "爱沙杯"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "瑞青超U21",
+      "aliases": [
+        "瑞青超U21"
+      ],
+      "raw_names": [
+        "瑞青超U21"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "美预备联",
+      "aliases": [
+        "美预备联"
+      ],
+      "raw_names": [
+        "美预备联"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "英协联杯",
+      "aliases": [
+        "英协联杯"
+      ],
+      "raw_names": [
+        "英协联杯"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "葡U23",
+      "aliases": [
+        "葡U23"
+      ],
+      "raw_names": [
+        "葡U23"
+      ],
+      "updated_at": "2026-08-11T09:32:48+08:00",
       "auto_added": true,
       "maintenance_statuses": [
         "自动登记-待复核"
