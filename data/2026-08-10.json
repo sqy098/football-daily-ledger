@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "updated_at": "2026-08-11T09:30:41+08:00",
+  "updated_at": "2026-08-12T09:31:01+08:00",
   "matches": [
     {
       "match_key": "2026-08-10|西雅图统治女足|天使城女足",
@@ -275,18 +275,18 @@
       "league": "阿业余",
       "home": "社会马竞",
       "away": "诺蒂卡哈科亚",
-      "status": "待赛果",
+      "status": "已结算",
       "handicap_pick": "主让0.5（1/0.8）",
       "ou_pick": "大 1.75（0.85/0.95）",
       "optional": "qtx:4610982;comp:7236;status:1;asia:1/0.5/0.8;bs:0.85/1.75/0.95",
       "fenxi_hash": "",
-      "score": null,
-      "half": null,
-      "handicap_result": null,
-      "ou_result": null,
-      "note": "未查询到赛果（qtx 无记录）",
+      "score": "1-0",
+      "half": "半(0-0)",
+      "handicap_result": "赢",
+      "ou_result": "输",
+      "note": "比分 1-0（半场 半(0-0)）来源qtx",
       "created_at": "2026-08-10T09:03:43+08:00",
-      "updated_at": "2026-08-11T09:30:38+08:00"
+      "updated_at": "2026-08-12T09:31:01+08:00"
     },
     {
       "match_key": "2026-08-10|上海海港U20|湖北青年星U20",
@@ -341,18 +341,18 @@
       "league": "乌拉后备",
       "home": "蒙特维多竞技后备队",
       "away": "阿尔比恩后备队",
-      "status": "待赛果",
+      "status": "已结算",
       "handicap_pick": "主让0.5（0.87/0.92）",
       "ou_pick": "大 2.5（0.87/0.92）",
       "optional": "qtx:4612599;comp:1696;status:1;asia:0.87/0.5/0.92;bs:0.87/2.5/0.92",
       "fenxi_hash": "",
-      "score": null,
-      "half": null,
-      "handicap_result": null,
-      "ou_result": null,
-      "note": "未查询到赛果（qtx 无记录）",
+      "score": "0-1",
+      "half": "半(0-0)",
+      "handicap_result": "输",
+      "ou_result": "输",
+      "note": "比分 0-1（半场 半(0-0)）来源qtx",
       "created_at": "2026-08-10T09:03:43+08:00",
-      "updated_at": "2026-08-11T09:30:38+08:00"
+      "updated_at": "2026-08-12T09:31:01+08:00"
     },
     {
       "match_key": "2026-08-10|皇家托马亚波U19|佩特莱罗独立U19",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-08-11T09:32:48+08:00",
-  "entry_count": 242,
+  "updated_at": "2026-08-12T09:33:37+08:00",
+  "entry_count": 249,
   "entries": [
     {
       "canonical_name": "不丹超",
@@ -4109,6 +4109,125 @@
         "葡U23"
       ],
       "updated_at": "2026-08-11T09:32:48+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "中美洲杯",
+      "aliases": [
+        "中美洲杯"
+      ],
+      "raw_names": [
+        "中美洲杯"
+      ],
+      "updated_at": "2026-08-12T09:33:37+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "丹麦U19",
+      "aliases": [
+        "丹麦U19"
+      ],
+      "raw_names": [
+        "丹麦U19"
+      ],
+      "updated_at": "2026-08-12T09:33:37+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "亚冠二级",
+      "aliases": [
+        "亚冠二级"
+      ],
+      "raw_names": [
+        "亚冠二级"
+      ],
+      "updated_at": "2026-08-12T09:33:37+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "印西隆联",
+      "aliases": [
+        "印西隆联"
+      ],
+      "raw_names": [
+        "印西隆联"
+      ],
+      "updated_at": "2026-08-12T09:33:37+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "挪威U19",
+      "aliases": [
+        "挪威U19"
+      ],
+      "raw_names": [
+        "挪威U19"
+      ],
+      "updated_at": "2026-08-12T09:33:37+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "罗杯",
+      "aliases": [
+        "罗杯"
+      ],
+      "raw_names": [
+        "罗杯"
+      ],
+      "updated_at": "2026-08-12T09:33:37+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "阿青联",
+      "aliases": [
+        "阿青联"
+      ],
+      "raw_names": [
+        "阿青联"
+      ],
+      "updated_at": "2026-08-12T09:33:37+08:00",
       "auto_added": true,
       "maintenance_statuses": [
         "自动登记-待复核"
