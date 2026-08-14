@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-08-12T09:33:37+08:00",
-  "entry_count": 249,
+  "updated_at": "2026-08-14T09:35:41+08:00",
+  "entry_count": 264,
   "entries": [
     {
       "canonical_name": "不丹超",
@@ -4228,6 +4228,261 @@
         "阿青联"
       ],
       "updated_at": "2026-08-12T09:33:37+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "乌兹甲B",
+      "aliases": [
+        "乌兹甲B"
+      ],
+      "raw_names": [
+        "乌兹甲B"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "伊拉联",
+      "aliases": [
+        "伊拉联"
+      ],
+      "raw_names": [
+        "伊拉联"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "伊朗超",
+      "aliases": [
+        "伊朗超"
+      ],
+      "raw_names": [
+        "伊朗超"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "塔吉克超",
+      "aliases": [
+        "塔吉克超"
+      ],
+      "raw_names": [
+        "塔吉克超"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "布隆迪联",
+      "aliases": [
+        "布隆迪联"
+      ],
+      "raw_names": [
+        "布隆迪联"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "拉脱杯",
+      "aliases": [
+        "拉脱杯"
+      ],
+      "raw_names": [
+        "拉脱杯"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "斐济联",
+      "aliases": [
+        "斐济联"
+      ],
+      "raw_names": [
+        "斐济联"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "波斯乙",
+      "aliases": [
+        "波斯乙"
+      ],
+      "raw_names": [
+        "波斯乙"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "澳维甲",
+      "aliases": [
+        "澳维甲"
+      ],
+      "raw_names": [
+        "澳维甲"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "科索沃超",
+      "aliases": [
+        "科索沃超"
+      ],
+      "raw_names": [
+        "科索沃超"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "芬超",
+      "aliases": [
+        "芬超"
+      ],
+      "raw_names": [
+        "芬超"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "英U21乙",
+      "aliases": [
+        "英U21乙"
+      ],
+      "raw_names": [
+        "英U21乙"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "阿塞超",
+      "aliases": [
+        "阿塞超"
+      ],
+      "raw_names": [
+        "阿塞超"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "阿联U19",
+      "aliases": [
+        "阿联U19"
+      ],
+      "raw_names": [
+        "阿联U19"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "阿联酋超",
+      "aliases": [
+        "阿联酋超"
+      ],
+      "raw_names": [
+        "阿联酋超"
+      ],
+      "updated_at": "2026-08-14T09:35:41+08:00",
       "auto_added": true,
       "maintenance_statuses": [
         "自动登记-待复核"
