@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-08-15T09:31:31+08:00",
-  "entry_count": 307,
+  "updated_at": "2026-08-16T09:33:38+08:00",
+  "entry_count": 336,
   "entries": [
     {
       "canonical_name": "不丹超",
@@ -5214,6 +5214,499 @@
         "黑山乙"
       ],
       "updated_at": "2026-08-15T09:31:31+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "丹麦超",
+      "aliases": [
+        "丹麦超"
+      ],
+      "raw_names": [
+        "丹麦超"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "加北女超",
+      "aliases": [
+        "加北女超"
+      ],
+      "raw_names": [
+        "加北女超"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "卢森甲",
+      "aliases": [
+        "卢森甲"
+      ],
+      "raw_names": [
+        "卢森甲"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "土库曼超",
+      "aliases": [
+        "土库曼超"
+      ],
+      "raw_names": [
+        "土库曼超"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "墨西超",
+      "aliases": [
+        "墨西超"
+      ],
+      "raw_names": [
+        "墨西超"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "巴女锦标U20",
+      "aliases": [
+        "巴女锦标U20"
+      ],
+      "raw_names": [
+        "巴女锦标U20"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "巴拉丙",
+      "aliases": [
+        "巴拉丙"
+      ],
+      "raw_names": [
+        "巴拉丙"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "巴拉甲",
+      "aliases": [
+        "巴拉甲"
+      ],
+      "raw_names": [
+        "巴拉甲"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "巴西乙",
+      "aliases": [
+        "巴西乙"
+      ],
+      "raw_names": [
+        "巴西乙"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "巴西甲",
+      "aliases": [
+        "巴西甲"
+      ],
+      "raw_names": [
+        "巴西甲"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "巴高乙",
+      "aliases": [
+        "巴高乙"
+      ],
+      "raw_names": [
+        "巴高乙"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "捷女甲",
+      "aliases": [
+        "捷女甲"
+      ],
+      "raw_names": [
+        "捷女甲"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "斯亚甲",
+      "aliases": [
+        "斯亚甲"
+      ],
+      "raw_names": [
+        "斯亚甲"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "斯伐超",
+      "aliases": [
+        "斯伐超"
+      ],
+      "raw_names": [
+        "斯伐超"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "明日之星女子冠军杯",
+      "aliases": [
+        "明日之星女子冠军杯"
+      ],
+      "raw_names": [
+        "明日之星女子冠军杯"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "法罗超",
+      "aliases": [
+        "法罗超"
+      ],
+      "raw_names": [
+        "法罗超"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "波黑甲",
+      "aliases": [
+        "波黑甲"
+      ],
+      "raw_names": [
+        "波黑甲"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "澳昆乙",
+      "aliases": [
+        "澳昆乙"
+      ],
+      "raw_names": [
+        "澳昆乙"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "澳首女联",
+      "aliases": [
+        "澳首女联"
+      ],
+      "raw_names": [
+        "澳首女联"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "爱尔高联",
+      "aliases": [
+        "爱尔高联"
+      ],
+      "raw_names": [
+        "爱尔高联"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "爱沙甲",
+      "aliases": [
+        "爱沙甲"
+      ],
+      "raw_names": [
+        "爱沙甲"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "美冠",
+      "aliases": [
+        "美冠"
+      ],
+      "raw_names": [
+        "美冠"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "苏女超",
+      "aliases": [
+        "苏女超"
+      ],
+      "raw_names": [
+        "苏女超"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "英U21杯",
+      "aliases": [
+        "英U21杯"
+      ],
+      "raw_names": [
+        "英U21杯"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "英女北",
+      "aliases": [
+        "英女北"
+      ],
+      "raw_names": [
+        "英女北"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "英女南",
+      "aliases": [
+        "英女南"
+      ],
+      "raw_names": [
+        "英女南"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "英社盾",
+      "aliases": [
+        "英社盾"
+      ],
+      "raw_names": [
+        "英社盾"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "荷女甲",
+      "aliases": [
+        "荷女甲"
+      ],
+      "raw_names": [
+        "荷女甲"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "阿丙曼特",
+      "aliases": [
+        "阿丙曼特"
+      ],
+      "raw_names": [
+        "阿丙曼特"
+      ],
+      "updated_at": "2026-08-16T09:33:38+08:00",
       "auto_added": true,
       "maintenance_statuses": [
         "自动登记-待复核"
