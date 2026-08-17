@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-08-16T09:33:38+08:00",
-  "entry_count": 336,
+  "updated_at": "2026-08-17T09:34:58+08:00",
+  "entry_count": 340,
   "entries": [
     {
       "canonical_name": "不丹超",
@@ -5707,6 +5707,74 @@
         "阿丙曼特"
       ],
       "updated_at": "2026-08-16T09:33:38+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "印锡联",
+      "aliases": [
+        "印锡联"
+      ],
+      "raw_names": [
+        "印锡联"
+      ],
+      "updated_at": "2026-08-17T09:34:58+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "土U19联",
+      "aliases": [
+        "土U19联"
+      ],
+      "raw_names": [
+        "土U19联"
+      ],
+      "updated_at": "2026-08-17T09:34:58+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "女亚冠联",
+      "aliases": [
+        "女亚冠联"
+      ],
+      "raw_names": [
+        "女亚冠联"
+      ],
+      "updated_at": "2026-08-17T09:34:58+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "科索沃甲",
+      "aliases": [
+        "科索沃甲"
+      ],
+      "raw_names": [
+        "科索沃甲"
+      ],
+      "updated_at": "2026-08-17T09:34:58+08:00",
       "auto_added": true,
       "maintenance_statuses": [
         "自动登记-待复核"
