@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "updated_at": "2026-08-17T09:35:00+08:00",
+  "updated_at": "2026-08-18T09:32:59+08:00",
   "matches": [
     {
       "match_key": "2026-08-17|洛杉矶FCII队|塔科马反抗者",
@@ -11,18 +11,18 @@
       "league": "美预备联",
       "home": "洛杉矶FCII队",
       "away": "塔科马反抗者",
-      "status": "已冻结",
+      "status": "已结算",
       "handicap_pick": "主让0.5（0.92/0.92）",
       "ou_pick": "大 3.25（0.86/0.96）",
       "optional": "qtx:4613157;comp:3380;status:1;asia:0.92/0.5/0.92;bs:0.86/3.25/0.96",
       "fenxi_hash": "",
-      "score": null,
-      "half": null,
-      "handicap_result": null,
-      "ou_result": null,
-      "note": null,
+      "score": "4-3",
+      "half": "半(2-1)",
+      "handicap_result": "赢",
+      "ou_result": "赢",
+      "note": "比分 4-3（半场 半(2-1)）来源qtx",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|西雅图海湾人|温哥华白浪",
@@ -33,18 +33,18 @@
       "league": "美职联（MLS）",
       "home": "西雅图海湾人",
       "away": "温哥华白浪",
-      "status": "已冻结",
+      "status": "已结算",
       "handicap_pick": "主受0.5（0.97/0.82）",
       "ou_pick": "大 3（0.97/0.82）",
       "optional": "qtx:4460451;comp:457;status:1;asia:0.97/-0.5/0.82;bs:0.97/3/0.82",
       "fenxi_hash": "",
-      "score": null,
-      "half": null,
-      "handicap_result": null,
-      "ou_result": null,
-      "note": null,
+      "score": "0-2",
+      "half": "半(0-0)",
+      "handicap_result": "输",
+      "ou_result": "输",
+      "note": "比分 0-2（半场 半(0-0)）来源qtx",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|圣何塞地震后备队|圣路易斯市B队",
@@ -55,18 +55,18 @@
       "league": "美预备联",
       "home": "圣何塞地震后备队",
       "away": "圣路易斯市B队",
-      "status": "已冻结",
+      "status": "已结算",
       "handicap_pick": "主让0（0.76/1.08）",
       "ou_pick": "大 3（0.95/0.87）",
       "optional": "qtx:4613158;comp:3380;status:1;asia:0.76/0/1.08;bs:0.95/3/0.87",
       "fenxi_hash": "",
-      "score": null,
-      "half": null,
-      "handicap_result": null,
-      "ou_result": null,
-      "note": null,
+      "score": "0-2",
+      "half": "半(0-1)",
+      "handicap_result": "输",
+      "ou_result": "输",
+      "note": "比分 0-2（半场 半(0-1)）来源qtx",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|蒂华纳|蓝十字",
@@ -77,18 +77,18 @@
       "league": "墨西超",
       "home": "蒂华纳",
       "away": "蓝十字",
-      "status": "已冻结",
+      "status": "已结算",
       "handicap_pick": "主受0.25（0.95/0.85）",
       "ou_pick": "大 2.5（0.82/0.97）",
       "optional": "qtx:4553828;comp:465;status:1;asia:0.95/-0.25/0.85;bs:0.82/2.5/0.97",
       "fenxi_hash": "",
-      "score": null,
-      "half": null,
-      "handicap_result": null,
-      "ou_result": null,
-      "note": null,
+      "score": "2-1",
+      "half": "半(1-1)",
+      "handicap_result": "赢",
+      "ou_result": "赢",
+      "note": "比分 2-1（半场 半(1-1)）来源qtx",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|墨尔本胜利青年队|诺夫克特",
@@ -99,18 +99,18 @@
       "league": "澳维甲",
       "home": "墨尔本胜利青年队",
       "away": "诺夫克特",
-      "status": "已冻结",
+      "status": "已结算",
       "handicap_pick": "主让0（0.83/0.93）",
       "ou_pick": "大 3.25（0.94/0.82）",
       "optional": "qtx:4470456;comp:593;status:1;asia:0.83/0/0.93;bs:0.94/3.25/0.82",
       "fenxi_hash": "",
-      "score": null,
-      "half": null,
-      "handicap_result": null,
-      "ou_result": null,
-      "note": null,
+      "score": "0-1",
+      "half": "半(0-0)",
+      "handicap_result": "输",
+      "ou_result": "输",
+      "note": "比分 0-1（半场 半(0-0)）来源qtx",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|布琳狮子|北鹰阳光",
@@ -121,18 +121,18 @@
       "league": "澳维甲",
       "home": "布琳狮子",
       "away": "北鹰阳光",
-      "status": "已冻结",
+      "status": "已结算",
       "handicap_pick": "主让0.75（0.98/0.78）",
       "ou_pick": "大 3.25（0.9/0.86）",
       "optional": "qtx:4470455;comp:593;status:1;asia:0.98/0.75/0.78;bs:0.9/3.25/0.86",
       "fenxi_hash": "",
-      "score": null,
-      "half": null,
-      "handicap_result": null,
-      "ou_result": null,
-      "note": null,
+      "score": "2-1",
+      "half": "半(0-0)",
+      "handicap_result": "赢",
+      "ou_result": "输半",
+      "note": "比分 2-1（半场 半(0-0)）来源qtx",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|德芬索后备队|蒙特维多竞技后备队",
@@ -143,18 +143,18 @@
       "league": "乌拉后备",
       "home": "德芬索后备队",
       "away": "蒙特维多竞技后备队",
-      "status": "已冻结",
+      "status": "已结算",
       "handicap_pick": "主让0.5（0.95/0.75）",
       "ou_pick": "大 2.5（0.81/0.89）",
       "optional": "qtx:4620585;comp:1696;status:1;asia:0.95/0.5/0.75;bs:0.81/2.5/0.89",
       "fenxi_hash": "",
-      "score": null,
-      "half": null,
-      "handicap_result": null,
-      "ou_result": null,
-      "note": null,
+      "score": "1-1",
+      "half": "半(1-1)",
+      "handicap_result": "赢",
+      "ou_result": "输",
+      "note": "比分 1-1（半场 半(1-1)）来源qtx",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|飓风队女足|独立女足",
@@ -165,18 +165,18 @@
       "league": "阿女甲",
       "home": "飓风队女足",
       "away": "独立女足",
-      "status": "已冻结",
+      "status": "已结算",
       "handicap_pick": "未开盘",
       "ou_pick": "大 2.25（0.99/0.71）",
       "optional": "qtx:4613725;comp:1906;status:1;asia://;bs:0.99/2.25/0.71",
       "fenxi_hash": "",
-      "score": null,
-      "half": null,
+      "score": "2-3",
+      "half": "半(1-0)",
       "handicap_result": null,
-      "ou_result": null,
-      "note": null,
+      "ou_result": "赢",
+      "note": "比分 2-3（半场 半(1-0)）来源qtx",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|阿尔比恩后备队|FC河床后备队",
@@ -187,18 +187,18 @@
       "league": "乌拉后备",
       "home": "阿尔比恩后备队",
       "away": "FC河床后备队",
-      "status": "已冻结",
+      "status": "已结算",
       "handicap_pick": "主让0（0.95/0.75）",
       "ou_pick": "大 2.5（0.77/0.93）",
       "optional": "qtx:4620586;comp:1696;status:1;asia:0.95/0/0.75;bs:0.77/2.5/0.93",
       "fenxi_hash": "",
-      "score": null,
-      "half": null,
-      "handicap_result": null,
-      "ou_result": null,
-      "note": null,
+      "score": "5-2",
+      "half": "半(2-1)",
+      "handicap_result": "赢",
+      "ou_result": "赢",
+      "note": "比分 5-2（半场 半(2-1)）来源qtx",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|社会体育协会女足|圣洛伦佐女足",
@@ -209,18 +209,18 @@
       "league": "阿女甲",
       "home": "社会体育协会女足",
       "away": "圣洛伦佐女足",
-      "status": "已冻结",
+      "status": "已结算",
       "handicap_pick": "主受0.5（0.77/0.93）",
       "ou_pick": "大 2（0.88/0.82）",
       "optional": "qtx:4613726;comp:1906;status:1;asia:0.77/-0.5/0.93;bs:0.88/2/0.82",
       "fenxi_hash": "",
-      "score": null,
-      "half": null,
-      "handicap_result": null,
-      "ou_result": null,
-      "note": null,
+      "score": "0-0",
+      "half": "半(0-0)",
+      "handicap_result": "输",
+      "ou_result": "输",
+      "note": "比分 0-0（半场 半(0-0)）来源qtx",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|卡利地亚雅典|拉里萨",
@@ -231,18 +231,18 @@
       "league": "希腊杯",
       "home": "卡利地亚雅典",
       "away": "拉里萨",
-      "status": "已冻结",
+      "status": "已结算",
       "handicap_pick": "未开盘",
       "ou_pick": "大 2.25（0.89/0.91）",
       "optional": "qtx:4613790;comp:269;status:1;asia://;bs:0.89/2.25/0.91",
       "fenxi_hash": "",
-      "score": null,
-      "half": null,
+      "score": "1-3",
+      "half": "半(0-1)",
       "handicap_result": null,
-      "ou_result": null,
-      "note": null,
+      "ou_result": "赢",
+      "note": "比分 1-3（半场 半(0-1)）来源qtx",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|格尼斯坦|埃尔维斯",
@@ -253,7 +253,7 @@
       "league": "芬超",
       "home": "格尼斯坦",
       "away": "埃尔维斯",
-      "status": "已冻结",
+      "status": "待赛果",
       "handicap_pick": "主让0（0.77/1.02）",
       "ou_pick": "大 3（0.95/0.85）",
       "optional": "qtx:4468176;comp:195;status:1;asia:0.77/0/1.02;bs:0.95/3/0.85",
@@ -262,9 +262,9 @@
       "half": null,
       "handicap_result": null,
       "ou_result": null,
-      "note": null,
+      "note": "未查询到赛果（qtx 无记录）",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|希奥利艾|帕尼维斯",
@@ -275,7 +275,7 @@
       "league": "立陶甲",
       "home": "希奥利艾",
       "away": "帕尼维斯",
-      "status": "已冻结",
+      "status": "待赛果",
       "handicap_pick": "主受0.25（0.77/1.02）",
       "ou_pick": "大 3（1.02/0.77）",
       "optional": "qtx:4550354;comp:300;status:1;asia:0.77/-0.25/1.02;bs:1.02/3/0.77",
@@ -284,9 +284,9 @@
       "half": null,
       "handicap_result": null,
       "ou_result": null,
-      "note": null,
+      "note": "未查询到赛果（qtx 无记录）",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|普莱西亚|索尔亚",
@@ -297,7 +297,7 @@
       "league": "乌克超",
       "home": "普莱西亚",
       "away": "索尔亚",
-      "status": "已冻结",
+      "status": "待赛果",
       "handicap_pick": "主让1（0.85/0.97）",
       "ou_pick": "大 2.5（0.94/0.86）",
       "optional": "qtx:4569648;comp:253;status:1;asia:0.85/1/0.97;bs:0.94/2.5/0.86",
@@ -306,9 +306,9 @@
       "half": null,
       "handicap_result": null,
       "ou_result": null,
-      "note": null,
+      "note": "未查询到赛果（qtx 无记录）",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|布尔加斯1919|索菲亚中央陆军B队",
@@ -319,7 +319,7 @@
       "league": "保乙",
       "home": "布尔加斯1919",
       "away": "索菲亚中央陆军B队",
-      "status": "已冻结",
+      "status": "待赛果",
       "handicap_pick": "未开盘",
       "ou_pick": "大 2.25（0.95/0.85）",
       "optional": "qtx:4573107;comp:333;status:1;asia://;bs:0.95/2.25/0.85",
@@ -328,9 +328,9 @@
       "half": null,
       "handicap_result": null,
       "ou_result": null,
-      "note": null,
+      "note": "未查询到赛果（qtx 无记录）",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|布拉迪斯拉发B队|克曼尼",
@@ -341,7 +341,7 @@
       "league": "斯伐甲",
       "home": "布拉迪斯拉发B队",
       "away": "克曼尼",
-      "status": "已冻结",
+      "status": "待赛果",
       "handicap_pick": "主让0.75（1/0.8）",
       "ou_pick": "大 2.5（0.85/0.95）",
       "optional": "qtx:4591980;comp:276;status:1;asia:1/0.75/0.8;bs:0.85/2.5/0.95",
@@ -350,9 +350,9 @@
       "half": null,
       "handicap_result": null,
       "ou_result": null,
-      "note": null,
+      "note": "未查询到赛果（qtx 无记录）",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|卡尔季察|阿里斯",
@@ -363,7 +363,7 @@
       "league": "希腊杯",
       "home": "卡尔季察",
       "away": "阿里斯",
-      "status": "已冻结",
+      "status": "待赛果",
       "handicap_pick": "主受2（0.95/0.87）",
       "ou_pick": "大 3（0.99/0.81）",
       "optional": "qtx:4607421;comp:269;status:1;asia:0.95/-2/0.87;bs:0.99/3/0.81",
@@ -372,9 +372,9 @@
       "half": null,
       "handicap_result": null,
       "ou_result": null,
-      "note": null,
+      "note": "未查询到赛果（qtx 无记录）",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|克卢日大学|UTA阿拉德",
@@ -385,7 +385,7 @@
       "league": "罗甲",
       "home": "克卢日大学",
       "away": "UTA阿拉德",
-      "status": "已冻结",
+      "status": "待赛果",
       "handicap_pick": "主让0.5（1.02/0.77）",
       "ou_pick": "大 2.25（0.77/1.02）",
       "optional": "qtx:4567526;comp:270;status:1;asia:1.02/0.5/0.77;bs:0.77/2.25/1.02",
@@ -394,9 +394,9 @@
       "half": null,
       "handicap_result": null,
       "ou_result": null,
-      "note": null,
+      "note": "未查询到赛果（qtx 无记录）",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|萨拉格斯基|费伦茨瓦罗斯",
@@ -407,7 +407,7 @@
       "league": "匈甲",
       "home": "萨拉格斯基",
       "away": "费伦茨瓦罗斯",
-      "status": "已冻结",
+      "status": "待赛果",
       "handicap_pick": "主受1（0.92/0.84）",
       "ou_pick": "大 3（0.95/0.81）",
       "optional": "qtx:4568843;comp:308;status:1;asia:0.92/-1/0.84;bs:0.95/3/0.81",
@@ -416,9 +416,9 @@
       "half": null,
       "handicap_result": null,
       "ou_result": null,
-      "note": null,
+      "note": "未查询到赛果（qtx 无记录）",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|卡拉巴克|沙马基",
@@ -429,7 +429,7 @@
       "league": "阿塞超",
       "home": "卡拉巴克",
       "away": "沙马基",
-      "status": "已冻结",
+      "status": "待赛果",
       "handicap_pick": "主让1（0.87/0.89）",
       "ou_pick": "大 3（0.81/0.95）",
       "optional": "qtx:4595585;comp:388;status:1;asia:0.87/1/0.89;bs:0.81/3/0.95",
@@ -438,9 +438,9 @@
       "half": null,
       "handicap_result": null,
       "ou_result": null,
-      "note": null,
+      "note": "未查询到赛果（qtx 无记录）",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     },
     {
       "match_key": "2026-08-17|德尤加斯|苏杜瓦",
@@ -451,7 +451,7 @@
       "league": "立陶甲",
       "home": "德尤加斯",
       "away": "苏杜瓦",
-      "status": "已冻结",
+      "status": "待赛果",
       "handicap_pick": "主受0.25（0.97/0.82）",
       "ou_pick": "大 2.25（0.95/0.85）",
       "optional": "qtx:4550355;comp:300;status:1;asia:0.97/-0.25/0.82;bs:0.95/2.25/0.85",
@@ -460,9 +460,9 @@
       "half": null,
       "handicap_result": null,
       "ou_result": null,
-      "note": null,
+      "note": "未查询到赛果（qtx 无记录）",
       "created_at": "2026-08-17T09:34:58+08:00",
-      "updated_at": "2026-08-17T09:34:58+08:00"
+      "updated_at": "2026-08-18T09:32:58+08:00"
     }
   ]
 }

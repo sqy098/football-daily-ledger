@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-08-17T09:34:58+08:00",
-  "entry_count": 340,
+  "updated_at": "2026-08-18T09:35:34+08:00",
+  "entry_count": 341,
   "entries": [
     {
       "canonical_name": "不丹超",
@@ -5775,6 +5775,23 @@
         "科索沃甲"
       ],
       "updated_at": "2026-08-17T09:34:58+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "阿曼联杯",
+      "aliases": [
+        "阿曼联杯"
+      ],
+      "raw_names": [
+        "阿曼联杯"
+      ],
+      "updated_at": "2026-08-18T09:35:34+08:00",
       "auto_added": true,
       "maintenance_statuses": [
         "自动登记-待复核"
