@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-08-18T09:35:34+08:00",
-  "entry_count": 341,
+  "updated_at": "2026-08-19T09:31:21+08:00",
+  "entry_count": 346,
   "entries": [
     {
       "canonical_name": "不丹超",
@@ -5792,6 +5792,91 @@
         "阿曼联杯"
       ],
       "updated_at": "2026-08-18T09:35:34+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "哈萨克杯",
+      "aliases": [
+        "哈萨克杯"
+      ],
+      "raw_names": [
+        "哈萨克杯"
+      ],
+      "updated_at": "2026-08-19T09:31:21+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "天皇杯",
+      "aliases": [
+        "天皇杯"
+      ],
+      "raw_names": [
+        "天皇杯"
+      ],
+      "updated_at": "2026-08-19T09:31:21+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "津巴超",
+      "aliases": [
+        "津巴超"
+      ],
+      "raw_names": [
+        "津巴超"
+      ],
+      "updated_at": "2026-08-19T09:31:21+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "超联杯",
+      "aliases": [
+        "超联杯"
+      ],
+      "raw_names": [
+        "超联杯"
+      ],
+      "updated_at": "2026-08-19T09:31:21+08:00",
+      "auto_added": true,
+      "maintenance_statuses": [
+        "自动登记-待复核"
+      ],
+      "notes": [
+        "每日流水线自动登记，标准名待人工复核"
+      ]
+    },
+    {
+      "canonical_name": "韩国杯",
+      "aliases": [
+        "韩国杯"
+      ],
+      "raw_names": [
+        "韩国杯"
+      ],
+      "updated_at": "2026-08-19T09:31:21+08:00",
       "auto_added": true,
       "maintenance_statuses": [
         "自动登记-待复核"
